@@ -1,24 +1,29 @@
-# README
+# Blog API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For storing text blurbs
 
-Things you may want to cover:
+## Needed
 
-* Ruby version
+- PostgreSQL - https://postgresapp.com/
+- Ruby on Rails - https://gorails.com/setup/osx/10.15-catalina
 
-* System dependencies
+## Install
 
-* Configuration
+```
+git clone git@github.com:joekennerly/blog-api.git
+cd blog-api
+cp example.env .env
+```
 
-* Database creation
+Open `/directory/.env` and enter in your postgres username and password
 
-* Database initialization
+```
+bundle install
+rails db:create db:migrate
+```
 
-* How to run the test suite
+## Run Server
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails server --binding=127.0.0.1
+```
